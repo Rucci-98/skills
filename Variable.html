@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Variable</title>
+
+    <style type="text/css">
+
+        .para1{
+            text-indent:2em;
+        }
+
+        h3,h2{
+            color: darkcyan;
+        }
+        body{
+            color: dimgrey;
+        }
+        img{
+            text-align:center;
+        }
+    </style>
+
+</head>
+<body>
+
+<h2>Variable</h2>
+<p>VBA中的变量，即可以根据算数值赋予不同值的量。用<font color="#ff4500">Dim</font> 来表示</p>
+
+<h3>Variable用处</h3>
+    <ol>
+        <li>可以简化公式表达，使代码可读性提高</li>
+        <li>方便修改数值，避免重复修改</li>
+    </ol>
+
+
+<table bgcolor="#696969" cellpadding="1">
+    <tr bgcolor="#f5f5f5">
+        <td>未使用变量X</td>
+        <td class="para1">
+            Sub 求相关值()<br>
+            <p>Cells(12, 2) = Cells(12, 1)*Cells(12, 1)*6
+            <p>Cells(12, 3) =Cells(12, 1)*Cells(12, 1)*Cells(12, 1)</p>
+            <p>End Sub</p>
+        </td>
+        <td rowspan="2" valign="center">
+            <a href="Variable-img.html">
+            <img src="img/Visio1.png" width="500px">
+            </a>
+        </td>
+    </tr>
+    <tr bgcolor="#f5f5f5">
+        <td align="center">使用变量X</td>
+        <td class="para1">Sub 求相关值()<br>
+            <p>Dim x, y, z</p>
+
+            <p>x = Cells(12, 1)</p>
+            <p> y = x * x * 6</p>
+            <p>z = x * x * x</p>
+
+            <p>Cells(12, 2) = y</p>
+            <p>Cells(12, 3) = z</p>
+
+            <p>End Sub</p>
+        </td>
+    </tr>
+
+</table>
+<hr>
+<h3>Variable注意点</h3>
+<ul>
+    <li>使用变量前,需声明唯一变量<font color="#ff4500">（Option Explicit）</font></li>
+    <li>变量名称不能用中文，可用英文或字母</li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</body>
+</html>
